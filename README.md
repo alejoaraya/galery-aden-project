@@ -23,7 +23,7 @@ La app consume la API de **Pexels** para mostrar una galería de videos, permiti
 
 ```bash
 
-npm clone 
+npm clone https://github.com/alejoaraya/galery-aden-project.git
 
 Configurar variables de entorno:
 Crear un archivo .env en la raíz con la API key de Pexels:

@@ -1,11 +1,11 @@
 
 import { configureStore } from '@reduxjs/toolkit';
-import videosReducer from './reducers/videoReducer';
+import photoReducer from './reducers/photoReducer';
 import { localStorageMiddleware } from './middleware/localStorageMiddeleware';
 
 export const store = configureStore({
     reducer: {
-        videos: videosReducer,
+        photos: photoReducer,
     },
     middleware: (getDefault) => getDefault().concat(localStorageMiddleware),
 });

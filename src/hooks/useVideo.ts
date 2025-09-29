@@ -1,37 +1,37 @@
 import { useAppDispatch, useAppSelector } from '../store/hooks';
 import {
-    fetchVideosAsync,
-    filterFavoriteVideos,
-    filterVideos,
+    fetchPhotosAsync,
+    filterFavoritePhoto,
+    filterPhoto,
     setImages,
     toggleFavorite,
-} from '../store/reducers/videoReducer';
+} from '../store/reducers/photoReducer';
 
-export function useVideo() {
-    const { data, filtered, error, status, showFavorite } = useAppSelector(state => state.videos);
+export function usePhoto() {
+    const { data, filtered, error, status, showFavorite } = useAppSelector(state => state.photos);
     const dispatch = useAppDispatch();
 
-    const fetchVideos = () => {
+    const fetchPhoto = () => {
         const images = JSON.parse(localStorage.getItem('images') || 'null');
 
         if (images && images.length > 0) {
             dispatch(setImages(images))
         } else {
-            dispatch(fetchVideosAsync());
+            dispatch(fetchPhotosAsync());
         }
 
     }
 
-    const handleFilterVideo = (value: string) => {
-        dispatch(filterVideos(value));
+    const handleFilterPhoto = (value: string) => {
+        dispatch(filterPhoto(value));
     }
 
     const handleFavorite = (id: number) => {
         dispatch(toggleFavorite(id));
     }
 
-    const handleFavoriteFilterVideo = () => {
-        dispatch(filterFavoriteVideos())
+    const handleFavoriteFilterPhoto = () => {
+        dispatch(filterFavoritePhoto())
     }
 
     return {
@@ -41,9 +41,9 @@ export function useVideo() {
         filtered,
         error,
         showFavorite,
-        fetchVideos,
-        handleFilterVideo,
+        fetchPhoto,
+        handleFilterPhoto,
         handleFavorite,
-        handleFavoriteFilterVideo
+        handleFavoriteFilterPhoto
     };
 }

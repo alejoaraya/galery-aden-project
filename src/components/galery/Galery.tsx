@@ -1,20 +1,20 @@
 import { useEffect } from "react"
-import { useVideo } from "../../hooks/useVideo"
+import { usePhoto } from "../../hooks/useVideo"
 import { Card } from "./Card"
 import { FavoriteToggle, Skeleton } from "../ui"
 
 export const Galery = () => {
 
-    const { error, status, favoriteTotal, filtered, showFavorite, handleFavorite, fetchVideos, handleFavoriteFilterVideo } = useVideo()
+    const { error, status, favoriteTotal, filtered, showFavorite, handleFavorite, fetchPhoto, handleFavoriteFilterPhoto } = usePhoto()
 
     useEffect(() => {
-        fetchVideos()
+        fetchPhoto()
     }, [])
 
 
 
     const handleClickFavoriteToggle = () => {
-        handleFavoriteFilterVideo()
+        handleFavoriteFilterPhoto()
     }
 
     if (status === 'failed') {
@@ -34,7 +34,7 @@ export const Galery = () => {
                         ? <Skeleton />
                         : filtered.length < 1
                             ? <h1 className="mt-5 font-bold text-center">No se encontraron imágenes del autor ingresado</h1>
-                            : filtered.map(video => (<Card key={video.id} handleFavorite={handleFavorite} {...video} />))
+                            : filtered.map(photo => (<Card key={photo.id} handleFavorite={handleFavorite} {...photo} />))
                 }
             </div>
         </div>

@@ -1,4 +1,4 @@
-export interface Video {
+export interface PhotoDTO {
     id: number;
     user: {
         name: string;

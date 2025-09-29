@@ -1,6 +1,6 @@
 import { useState } from "react"
 import type { ChangeEvent, KeyboardEvent } from "react"
-import { useVideo } from "../../hooks/useVideo"
+import { usePhoto } from "../../hooks/useVideo"
 
 
 
@@ -8,14 +8,14 @@ import { useVideo } from "../../hooks/useVideo"
 export const Filter = () => {
 
     const [value, setValue] = useState('')
-    const { handleFilterVideo } = useVideo()
+    const { handleFilterPhoto } = usePhoto()
 
     const onChange = (e: ChangeEvent<HTMLInputElement>) => {
         setValue(e.target.value)
     }
 
     const onSubmit = () => {
-        handleFilterVideo(value)
+        handleFilterPhoto(value)
     }
 
     const onKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {

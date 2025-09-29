@@ -1,2 +1,2 @@
-export * from './Video';
-export * from './VideoResponse';
+export * from './photo-response';
+export * from './photo';

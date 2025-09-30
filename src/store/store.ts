@@ -1,4 +1,3 @@
-
 import { configureStore } from '@reduxjs/toolkit';
 import photoReducer from './reducers/photoReducer';
 import { localStorageMiddleware } from './middleware/localStorageMiddeleware';

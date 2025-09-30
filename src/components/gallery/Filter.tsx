@@ -1,6 +1,6 @@
 import { useState } from "react"
 import type { ChangeEvent, KeyboardEvent } from "react"
-import { usePhoto } from "../../hooks/useVideo"
+import { usePhoto } from "../../hooks/usePhoto"
 
 
 

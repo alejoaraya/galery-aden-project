@@ -1,7 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 
-import { GaleryApp } from './GaleryApp'
+import { GalleryApp } from './GalleryApp'
 import { StoreProvider } from './store/StoreProvider'
 
 import './index.css'
@@ -10,7 +10,7 @@ import './index.css'
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <StoreProvider>
-      <GaleryApp />
+      <GalleryApp />
     </StoreProvider>
   </StrictMode>,
 )

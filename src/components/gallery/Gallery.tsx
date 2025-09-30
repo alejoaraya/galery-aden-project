@@ -1,9 +1,9 @@
 import { useEffect } from "react"
-import { usePhoto } from "../../hooks/useVideo"
+import { usePhoto } from "../../hooks/usePhoto"
 import { Card } from "./Card"
 import { FavoriteToggle, Skeleton } from "../ui"
 
-export const Galery = () => {
+export const Gallery = () => {
 
     const { error, status, favoriteTotal, filtered, showFavorite, handleFavorite, fetchPhoto, handleFavoriteFilterPhoto } = usePhoto()
 

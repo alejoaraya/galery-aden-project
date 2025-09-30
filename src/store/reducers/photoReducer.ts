@@ -31,9 +31,6 @@ export const fetchPhotosAsync = createAsyncThunk<PhotoDTO[]>(
                 }
             });
 
-            console.log(response.data);
-
-
             return response.data.photos.map(photo => ({
                 id: photo.id,
                 user: {

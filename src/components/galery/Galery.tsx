@@ -27,7 +27,7 @@ export const Galery = () => {
             {
                 favoriteTotal > 0 && <FavoriteToggle favoriteTotal={favoriteTotal} handleClickFavoriteToggle={handleClickFavoriteToggle} showFavorite={showFavorite} />
             }
-            <div className="flex flex-wrap gap-10 justify-center ">
+            <div className="flex flex-wrap gap-10 mt-5 justify-center ">
 
                 {
                     status === 'loading'
